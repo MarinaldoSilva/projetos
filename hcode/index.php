@@ -56,19 +56,45 @@ $z = 8;
 //se y for nulo verifica x, se x for nulo verifica o z, se não tiver nada não mostra nada
 //echo $y ?? $x ?? $z;
 
+//como deixar tudo maiusculo 
+//srt = string / to = para / upper = upercase
+$nomes = "marinaldo silvá";
+//echo strtoupper($nomes);
+
+//deixa minusculo
+//srt = string / to = para / lower = pequeno 
+//echo strtolower($nomes);
+
+//primeira letra da palavra maiuscula 
+//uc = upercase / first = primeira
+//echo ucfirst($nomes);
+
+//primeira letra de cada palavra com letra maiuscula
+//uc = upercase / words = mundo("quer dizer todas as palavras da variavel, todas as palavraas desse mundo da variavel")
+//echo ucwords($nomes);
 
 
-echo "tchau";
+//para tocar as posições das letras
+//str_replace("valor procurado", "subistituir por valor que vc definir", $variavel buscada);
+$empresa = "Atacadao";
+
+//echo str_replace("a", "@", $empresa);
+
+$frase = "O flamengo é o verdadeiro campeão de 87";
+$find = "campeão";
+//srt = string / pos = posição "vai procurar e exibir a posição da string campeão por exemplo(esta na posição 27 que é o vigesimo setimo caracter)"
+$qualPalavraEstouProcurando = strpos($frase, $find);
+
+//procurar a somente o que vem antes de campeão 
+$palavraAnteriorDaMinhaProcura = substr($frase, 0, $qualPalavraEstouProcurando);
 
 
+//mostrar a tudo que vem depois de campeão 
 
 
+//subsrt($ondeVouProcurar, $quantidadeDeLetrasQuetemNaPalavraCampeão + strlan(find) "o srtlan serve para contar, então ele vai somar a quantidade de letras que tem na variavel $find então ele vai procurar ate a palavra" )
+$palavraAposValorDaMinhaProcura = substr($frase, $qualPalavraEstouProcurando + strlen($find), strlen($frase));
 
-
-
-
-
-
+var_dump($palavraAposValorDaMinhaProcura);
 
 ?>
-
